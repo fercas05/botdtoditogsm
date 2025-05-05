@@ -1,0 +1,40 @@
+{
+	"name": "base-bailey-json",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/app.js",
+	"type": "module",
+	"scripts": {
+		"start": "node --env-file=.env  ./dist/app.js",
+		"lint": "eslint . --no-ignore",
+		"db": "nodemon --env-file=.env src/database/Config/init.ts",
+		"dev": "npm run lint && nodemon --env-file=.env ./src/app.ts",
+		"build": "npx rollup -c"
+	},
+	"keywords": [],
+	"dependencies": {
+		"@builderbot/bot": "1.1.7",
+		"@builderbot/database-json": "^1.2.1",
+		"@builderbot/provider-baileys": "1.1.7",
+		"axios": "^1.7.3",
+		"colors": "^1.4.0",
+		"mysql2": "^3.11.0",
+		"sequelize": "^6.37.3"
+	},
+	"devDependencies": {
+		"@types/colors": "^1.2.1",
+		"@types/node": "^20.14.15",
+		"@typescript-eslint/eslint-plugin": "^7.18.0",
+		"@typescript-eslint/parser": "^7.18.0",
+		"eslint": "^8.57.0",
+		"eslint-plugin-builderbot": "latest",
+		"nodemon": "^3.1.4",
+		"rollup": "^4.20.0",
+		"rollup-plugin-typescript2": "^0.36.0",
+		"tsx": "^4.17.0",
+		"typescript": "^5.5.4"
+	},
+	"author": "",
+	"license": "ISC",
+	"Transform": "AWS::Serverless-2016-10-31"
+}

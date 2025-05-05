@@ -1,0 +1,310 @@
+[
+  {
+    "ref": "4a8aae55-dd0c-4c67-a5e6-e61956b55a2f",
+    "keyword": "cf7023d0b4c668f92effd7f424afec14",
+    "answer": "Bot",
+    "options": {},
+    "from": "573155775806",
+    "refSerialize": "7c31aa743eeb7c7081845dfdf854c757"
+  },
+  {
+    "ref": "ans_aa35f0ba-6959-4e64-a169-ffdbddc2f49d",
+    "keyword": "key_27654b2a-a06d-456b-bd2e-09ba08220d83",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "f7d0903323baed45350418f726e8ce38",
+    "from": "573155775806"
+  },
+  {
+    "ref": "ans_4cf32b10-cc0c-4210-a4c4-4790352c3449",
+    "keyword": "key_ba3b577e-b750-4d05-aa5c-fce89b9e31ca",
+    "answer": "En cualquier momento escriba *bot*💚\n*1* *principales servicios*\n*2* agregar credito a la web\n*3* motorola\n*4* nokia\n*5* xiaomi\n*6* aplee bypass 5s-14 pro max\n*7* renta box\n*8* *frp key / honor*\n*9* samsung\n*A* no registros 🇨🇴",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "59c51629550475b25cae8efd81d4df18",
+    "from": "573155775806"
+  },
+  {
+    "ref": "aa74064d-762d-4117-b8f7-07c14d6a2c23",
+    "keyword": "59c51629550475b25cae8efd81d4df18",
+    "answer": "A",
+    "options": {},
+    "from": "573155775806",
+    "refSerialize": "dda4ec89253a208a2baea334f5233f20"
+  },
+  {
+    "ref": "ans_fba217b5-3ed0-49b2-bd7a-0eaed3cd56ce",
+    "keyword": "key_bd2aee5c-2f7a-4d63-a623-4b90063fe9b5",
+    "answer": "no registros 🇨🇴\n✅️Desbloqueo No Registro:✅️\n*📶Movistar:📶*\nTiempo: 1 a 92 horas Habiles\n\nRequisitos:\n\n-Imei escrito\n\n*solo estar reportado por movistar*\n\nclean mundial check 👉https://imeipro.info/👈\n\nopcional🥳✅ Numero movistar del cliente\n\nopcional🥳✅ Datos del cliente para que quede a nombre de el preferiblemente",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "8c7c32e194056f47ca35656cbd14599e",
+    "from": "573155775806"
+  },
+  {
+    "ref": "ans_f49bff58-3ecd-495c-8d4f-ce3e42cf7d1a",
+    "keyword": "ans_fba217b5-3ed0-49b2-bd7a-0eaed3cd56ce",
+    "answer": "no registros 🇨🇴\n✅️Desbloqueo No Registro:✅️\n\n*📶Claro📶*\n\nTiempo: 1 Hora Max\n\nRequisitos:\n\n*solo estar reportado por claro*\n\nclean mundial check 👉https://imeipro.info/👈\n\nImei escrito",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "cd69e08be97e6e5dad94dadab9fb09ec",
+    "from": "573155775806"
+  },
+  {
+    "ref": "ans_bb50f12b-441c-4577-9dab-f432ef80ecf6",
+    "keyword": "ans_f49bff58-3ecd-495c-8d4f-ce3e42cf7d1a",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "b25e7fea10906751db6ba73157287116",
+    "from": "573155775806"
+  },
+  {
+    "ref": "ans_29225118-2440-4ff0-ad90-6f55cdb44b58",
+    "keyword": "ans_bb50f12b-441c-4577-9dab-f432ef80ecf6",
+    "answer": "no registros 🇨🇴\n✅️Desbloqueo No Registro:✅️\n*📶Tigo:📶*\nTiempo: 24 a 72 horas\n\nRequisitos:\n\n*solo estar reportado por tigo*\n\nclean mundial check 👉https://imeipro.info/👈\n\n2 fotos fondo blanco o negro, una marcando *#06# y la otra en ajustes donde muestra el imei\n\n❌❌*no captura de pantalla*❌❌\n\nenviar imei escrito y modelo\n\n\n💚FUENTE DIRECTA💚",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "ab28f1e3153b8ad295d18101064686fe",
+    "from": "573155775806"
+  },
+  {
+    "ref": "ans_ad312216-5e83-4fd0-9d70-edb9995522f0",
+    "keyword": "ans_29225118-2440-4ff0-ad90-6f55cdb44b58",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "86e1e9313c90b9eabec6a8c7ef8f1663",
+    "from": "573155775806"
+  },
+  {
+    "ref": "ans_a9ff4be3-abbd-419e-9097-11528c8be646",
+    "keyword": "ans_ad312216-5e83-4fd0-9d70-edb9995522f0",
+    "answer": "*no registros 🇨🇴\n✅️Desbloqueo No Registro:✅️\ncombinados son mas costosos\n*movistar tigo*\n*claro movistar*\n*tigo movistar*\n*claro tigo*\n*preguntar*",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "ac74ead3bdbfc2fc3598af7ae28ca592",
+    "from": "573155775806"
+  },
+  {
+    "ref": "ans_dfbaba48-c38d-49a0-a786-ffaa198817e1",
+    "keyword": "ans_a9ff4be3-abbd-419e-9097-11528c8be646",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "e9e5ca20048c19733142adfa994fc99f",
+    "from": "573155775806"
+  },
+  {
+    "ref": "338a13e8-ddbe-4a2d-8da9-0d5e25f904ab",
+    "keyword": "e9e5ca20048c19733142adfa994fc99f",
+    "answer": "bot",
+    "options": {},
+    "from": "573155775806",
+    "refSerialize": "a2ccc49680d312a17766fc74fea5c32e"
+  },
+  {
+    "ref": "ans_aa35f0ba-6959-4e64-a169-ffdbddc2f49d",
+    "keyword": "key_27654b2a-a06d-456b-bd2e-09ba08220d83",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "f7d0903323baed45350418f726e8ce38",
+    "from": "573155775806"
+  },
+  {
+    "ref": "ans_4cf32b10-cc0c-4210-a4c4-4790352c3449",
+    "keyword": "key_ba3b577e-b750-4d05-aa5c-fce89b9e31ca",
+    "answer": "En cualquier momento escriba *bot*💚\n*1* *principales servicios*\n*2* agregar credito a la web\n*3* motorola\n*4* nokia\n*5* xiaomi\n*6* aplee bypass 5s-14 pro max\n*7* renta box\n*8* *frp key / honor*\n*9* samsung\n*A* no registros 🇨🇴",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "59c51629550475b25cae8efd81d4df18",
+    "from": "573155775806"
+  },
+  {
+    "ref": "ans_3feb7ee7-98da-4b13-acbe-b5bce2103f01",
+    "keyword": "key_4605bece-dd35-439e-9d77-419b5d92ed6a",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "49497a6bd261d0c72a8ab5d33b99ac07",
+    "from": "573118222267"
+  },
+  {
+    "ref": "ans_833780f7-3d60-44da-afc9-c799e3f26788",
+    "keyword": "key_7f22f2b2-bfd9-4123-b7c0-282642af72a3",
+    "answer": "Vamos a tomar sus datos para el registro",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "c32bf87a1be248fbaf235bee6a16279a",
+    "from": "573118222267"
+  },
+  {
+    "ref": "ans_672e2290-bec8-494d-a4bf-3a7b7f14ac91",
+    "keyword": "key_a2680632-310b-4e87-9889-9872ec5956eb",
+    "answer": "Cual es su nombre?",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "e422892baddda783711b30776a2d20ea",
+    "from": "573118222267"
+  },
+  {
+    "ref": "5d28be89-888b-494f-853d-8cd1d13f8aac",
+    "keyword": "e422892baddda783711b30776a2d20ea",
+    "answer": "Servi tecnomovil",
+    "options": {},
+    "from": "573118222267",
+    "refSerialize": "2e34abe2595eb37c93ccd74616938540"
+  },
+  {
+    "ref": "ans_c5f0e454-adb4-4cd7-a352-bc0badd97efd",
+    "keyword": "ans_672e2290-bec8-494d-a4bf-3a7b7f14ac91",
+    "answer": "__call_action__",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "dc198502715a796f608bb0c0be1308bb",
+    "from": "573118222267"
+  },
+  {
+    "ref": "961b1523-d1dd-4a30-8542-54e66c1331e4",
+    "keyword": null,
+    "answer": "Me confirmas que te llamas *Servi tecnomovil*?",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": false,
+      "delay": 0
+    },
+    "from": "573118222267",
+    "refSerialize": "4c6c4c64b3afb870dba79fe1745443cc"
+  },
+  {
+    "ref": "ans_9d6d5c1c-10c6-40b6-a1ca-4249c4c6eba3",
+    "keyword": "ans_c5f0e454-adb4-4cd7-a352-bc0badd97efd",
+    "answer": "Seguro que es tu nombre\n digita 1️⃣ Si  2️⃣ Editar",
+    "options": {
+      "buttons": [],
+      "capture": false,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "3f54dd8710b987b815fb18713130e087",
+    "from": "573118222267"
+  },
+  {
+    "ref": "ans_aadb690e-6da9-44cc-aad7-9a318a7da6e8",
+    "keyword": "ans_9d6d5c1c-10c6-40b6-a1ca-4249c4c6eba3",
+    "answer": "__capture_only_intended__",
+    "options": {
+      "buttons": [],
+      "capture": true,
+      "delay": 0,
+      "nested": [],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "ff3d1d77a5f9e4e40582a4ba22d96f32",
+    "from": "573118222267"
+  },
+  {
+    "ref": "50a7a146-5fb9-4e9d-8d08-ecd12b7f9472",
+    "keyword": "ff3d1d77a5f9e4e40582a4ba22d96f32",
+    "answer": "1",
+    "options": {},
+    "from": "573118222267",
+    "refSerialize": "290236b1d481a790a200ea6e94b2122a"
+  }
+]

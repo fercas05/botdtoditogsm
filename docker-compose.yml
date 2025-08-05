@@ -1,0 +1,28 @@
+services:
+  bot-unlock-magic-service:
+    container_name: bot_unlock_magic_container
+    image: bot-unlock-magic-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    network_mode: host    
+    restart: always
+    environment:
+      MYSQL_DB_HOST: localhost
+      MYSQL_DB_USER: bots_admin
+      MYSQL_DB_NAME: bots_db
+      MYSQL_DB_PASSWORD: jctwzt&XH2
+      MYSQL_DB_PORT: 3306
+      WHATSAPP_CHAT_GROUP_ID: 120363298355639950@g.us
+      PORT: 3006
+      BOT_NAME: BOT UNLOCK MAGIC
+      URL_GOOGLE_CONTACTS_API: "http://localhost:4000/google/contacts"
+    env_file:
+      - .env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"   # Limita el tamaño máximo de los logs a 10MB
+        max-file: "3"     # Mantiene 3 archivos de logs

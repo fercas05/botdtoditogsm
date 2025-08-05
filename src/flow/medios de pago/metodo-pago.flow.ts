@@ -7,7 +7,8 @@ export const pagoNequiFlow = addKeyword(['nequi', 'bancolombia', 'daviplata'])
         '👇TASA PARA LOS QUE PAGAN EN USD👇',
         'https://www.larepublica.co/indicadores-economicos/mercado-cambiario/dolar',
         '',
-        'ESCRIBIR 👉🏻 *PAGOQR* / *TARJETAVISA*',
+        'ESCRIBIR 👉🏻 *PAGOQR*',
+        'ESCRIBIR 👉🏻 *TARJETAVISA*',
         '',
         '*3115164835*  davi plata',
         '',
@@ -16,10 +17,10 @@ export const pagoNequiFlow = addKeyword(['nequi', 'bancolombia', 'daviplata'])
         'segundario *45346520781* bancolombia ahorros',
         '',
         'ADJUNTAR COMPROBANTE DE PAGO CLARO Y VISIBLE',
-        '💚*enviar *QR* para comprobar pago*🚫',
+        '',
+        '💚*enviar *QR* para comprobar pago*',
         '',
         '*cuenta personales no terceros*',
-        
         
     ])
     .addAnswer([

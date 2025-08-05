@@ -1,20 +1,6 @@
 import { addKeyword, EVENTS } from "@builderbot/bot";
 
 export const fmiOffIpadsFlow = addKeyword(EVENTS.ACTION)
-    
-    .addAnswer([
-        "📌 *FMI OFF - Lista de dispositivos compatibles*",
-        "✔ Dispositivos con verificación (Usar Mina Tool):",
-        "- iPad mini 4 (iPad5,1)",
-        "- iPad Air 2 (iPad5,3)",
-        "- iPad (5ª gen) (iPad6,11)",
-        "- iPad Pro (12.9) (iPad6,7)",
-        "- iPad Pro (9.7) (iPad6,3)",
-        "- iPad (6ª gen) (iPad7,5)",
-        "- iPad (7ª gen) (iPad7,11)",
-        "- iPad Pro (12.9, 2ª gen) (iPad7,1)",
-        "- iPad Pro (10.5) (iPad7,3)",
-    ])
     .addAnswer([
         "✔ Dispositivos por SN (Sin conexión a herramientas):",
         "- iPad 2 (iPad2,1 / iPad2,4)",
@@ -32,6 +18,4 @@ export const fmiOffIpadsFlow = addKeyword(EVENTS.ACTION)
         "✅ Sin bypass – Eliminación total y definitiva",
         "✅ Fácil – Solo ingresa tu SN o usa Mina Tool",
         "✅ Exclusivo – Para dueños de servidores",
-
-        "tols https://mega.nz/file/nG5zkLDT#OOWEHr2pP0aY44zWqXbiV2dP9xIGho-iBLqbRiSFc04"
     ]);

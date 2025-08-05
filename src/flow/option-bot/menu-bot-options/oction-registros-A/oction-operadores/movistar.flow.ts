@@ -11,7 +11,7 @@ export const movistarFlow = addKeyword(EVENTS.ACTION)
         'Requisitos:',
         '1. IMEI escrito.',
         '2. Solo estar reportado por Movistar.',
-        '3. Realizar un *clean mundial check* https://imeipro.info/👈',
+        '3. Realizar un *clean mundial check* https://imeipro.info',
         '4. *Opcional* 🥳✅ Enviar el número Movistar del cliente.',
         '5. *Opcional* 🥳✅ Enviar los datos del cliente para que quede a nombre de él preferiblemente.',
         '',

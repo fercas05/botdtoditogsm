@@ -9,12 +9,13 @@ export const pagoNequiFlow = addKeyword(['nequi', 'bancolombia', 'daviplata'])
         '',
         'ESCRIBIR 👉🏻 *PAGOQR*',
         'ESCRIBIR 👉🏻 *TARJETAVISA*',
+        '*llavescolombia*', '*llaves*', '*bre-b*',
         '',
-        '*3115164835*  davi plata',
+        '*3208127538*  davi plata',
         '',
         '🙂*nequi* 320 812 7538',
         '',
-        'segundario *45346520781* bancolombia ahorros',
+        '*45346520781* bancolombia ahorros',
         '',
         'ADJUNTAR COMPROBANTE DE PAGO CLARO Y VISIBLE',
         '',
@@ -176,12 +177,23 @@ export const pagoQRFlow = addKeyword('PAGOQR')
 export const pagoTarjeta = addKeyword('TARJETAVISA')
     .addAnswer([
         '*Pago con Tarjeta* 💳',
+
+        '⚠️ *Importante:* el pago con tarjeta tiene un porcentaje 4.5 adicional.',
+        'Consulta los detalles aquí 👉 https://dtodito-gsm.com/porcentaje',
+        '',
         'Puedes pagar de forma segura usando el siguiente enlace:',
         '👉 https://checkout.wompi.co/l/VPOS_r4M81D',
         '',
-        '⚠️ *Importante:* el pago con tarjeta tiene un porcentaje 4.5 adicional.',
-        'Consulta los detalles aquí 👉 https://dtodito-gsm.com/porcentaje',
     ]);
+
+export const pagoLlavesColombia = addKeyword(['llavescolombia', 'llaves', 'bre-b'])
+  .addAnswer([
+    '🚀 Pagos con llave Bre‑B –',
+    'llegan al instante,',
+    'sin costo'
+  ])
+  .addAnswer(['@edilson727'])
+  .addAnswer(['0039345558']);
 
 export const metodosDePagoFLOWS = [
  pagoNequiFlow,
@@ -195,5 +207,6 @@ export const metodosDePagoFLOWS = [
  pagoChileFlow,
  binancepayFlow,
  pagoQRFlow,
- pagoTarjeta
+ pagoTarjeta,
+ pagoLlavesColombia
 ]

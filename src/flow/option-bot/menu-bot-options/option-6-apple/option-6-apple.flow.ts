@@ -17,10 +17,10 @@ export const opcion6AppleMenuFlow = addKeyword(EVENTS.ACTION)
     .addAction(async (ctx, { gotoFlow }) => start(ctx, gotoFlow, 20000))
     .addAnswer([
         "Seleccione:",
-        "*1* Bypass Lpro MAX",
-        "*2* Bypass IREMOVAL",
-        "*3* FMI OFF MAC",
-        "*4* FMI OFF WIN",
+        "*1* Bypass ipad",
+        "*2* Bypass xr-16promax",
+        "*3* FMI OFF IPADS",
+        "*4* FMI OFF IPADS",
         "*#* Menú principal 🔄"
     ],
     { capture: true },

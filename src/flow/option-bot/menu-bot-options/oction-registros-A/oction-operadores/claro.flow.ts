@@ -10,6 +10,6 @@ export const claroFlow = addKeyword(EVENTS.ACTION)
     '',
     '📋 Requisitos:',
     '- Solo estar reportado por Claro',
-    '- Verificación limpia mundial 👉 [IMEI Pro Check](https://imeipro.info/) 👈',
+    '- Verificación limpia mundial 👉 https://imeipro.info👈',
     '- IMEI escrito',
 ])

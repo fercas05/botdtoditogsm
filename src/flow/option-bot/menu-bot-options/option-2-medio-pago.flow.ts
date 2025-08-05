@@ -1,5 +1,5 @@
 import { addKeyword, EVENTS } from "@builderbot/bot";
-import { binancepayFlow, pagoargentinaFlow, pagoBoliviaFlow, pagoBrasilFlow, pagoChileFlow, pagoEcuadorFlow, pagomexicoFlow, pagoNequiFlow, pagoPeruFlow, pagoQRFlow, pagoVenezuelaFlow, pagoTarjeta } from "../../medios de pago/metodo-pago.flow";
+import { pagoLlavesColombia, binancepayFlow, pagoargentinaFlow, pagoBoliviaFlow, pagoBrasilFlow, pagoChileFlow, pagoEcuadorFlow, pagomexicoFlow, pagoNequiFlow, pagoPeruFlow, pagoQRFlow, pagoVenezuelaFlow, pagoTarjeta } from "../../medios de pago/metodo-pago.flow";
 import { reset, start, stop } from "../../idle-custom";
 
 const menuFlow = {
@@ -14,8 +14,8 @@ const menuFlow = {
    "9": pagoBoliviaFlow,
    "A": pagoTarjeta,
    "B": binancepayFlow,
-   "qr": pagoQRFlow
-   
+   "C": pagoQRFlow,
+   "D": pagoLlavesColombia,
 }
 
 
@@ -34,7 +34,8 @@ export const opcion2medioDePagoFlow = addKeyword(EVENTS.ACTION)
 '9️⃣ 🇧🇴-BNB tigo money',
 '🅰 *TARJETA*',
 '🅱️ binance pay',
-'*QR* para obtener el pago por qr',
+'*C* para obtener el pago por qr',
+'*D* Llaves Colombia',
 'Skrill',
 'Paypal solo verificado',
 'Y personales',

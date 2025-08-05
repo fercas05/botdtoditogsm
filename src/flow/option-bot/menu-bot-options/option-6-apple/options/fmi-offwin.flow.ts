@@ -2,19 +2,6 @@ import { addKeyword, EVENTS } from "@builderbot/bot";
 
 export const fmiOffIpadsWinFlow = addKeyword(EVENTS.ACTION)
     .addAnswer([
-        "📌 *FMI OFF - compatibles en Windows*",
-        "✔ Dispositivos con verificación Tool",
-        "- iPad mini 4 (iPad5,1)",
-        "- iPad Air 2 (iPad5,3)",
-        "- iPad (5ª gen) (iPad6,11)",
-        "- iPad Pro (12.9) (iPad6,7)",
-        "- iPad Pro (9.7) (iPad6,3)",
-        "- iPad (6ª gen) (iPad7,5)",
-        "- iPad (7ª gen) (iPad7,11)",
-        "- iPad Pro (12.9, 2ª gen) (iPad7,1)",
-        "- iPad Pro (10.5) (iPad7,3)",
-    ])
-    .addAnswer([
         "✔ Dispositivos por SN *Sin conexión*",
         "- iPad 2 (iPad2,1 / iPad2,4)",
         "- iPad mini (iPad2,5) - iPods",

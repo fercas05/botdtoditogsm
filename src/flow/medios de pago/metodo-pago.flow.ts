@@ -9,6 +9,7 @@ export const pagoNequiFlow = addKeyword(['nequi', 'bancolombia', 'daviplata'])
         '',
         'ESCRIBIR 👉🏻 *PAGOQR*',
         'ESCRIBIR 👉🏻 *TARJETAVISA*',
+        'ESCRIBIR 👇👇👇',
         '*llavescolombia*', '*llaves*', '*bre-b*',
         '',
         '*3208127538*  davi plata',
@@ -188,7 +189,7 @@ export const pagoTarjeta = addKeyword('TARJETAVISA')
 
 export const pagoLlavesColombia = addKeyword(['llavescolombia', 'llaves', 'bre-b'])
   .addAnswer([
-    '🚀 Pagos con llave Bre‑B –',
+    '🚀 Pagos con llave Bre‑B',
     'llegan al instante,',
     'sin costo'
   ])

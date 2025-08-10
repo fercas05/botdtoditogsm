@@ -14,7 +14,7 @@ export const pagoNequiFlow = addKeyword(['nequi', 'bancolombia', 'daviplata'])
         '',
         '*3208127538*  davi plata',
         '',
-        '🙂*nequi* 320 812 7538',
+        '🙂*nequi llave* @edilson727',
         '',
         '*45346520781* bancolombia ahorros',
         '',
@@ -25,6 +25,7 @@ export const pagoNequiFlow = addKeyword(['nequi', 'bancolombia', 'daviplata'])
         '*cuenta personales no terceros*',
         
     ])
+    .addAnswer(['@edilson727'])
     .addAnswer([
         '🚫*importante sin comcepto pago*🚫',
     ])
@@ -194,7 +195,6 @@ export const pagoLlavesColombia = addKeyword(['llavescolombia', 'llaves', 'bre-b
     'sin costo'
   ])
   .addAnswer(['@edilson727'])
-  .addAnswer(['0039345558']);
 
 export const metodosDePagoFLOWS = [
  pagoNequiFlow,

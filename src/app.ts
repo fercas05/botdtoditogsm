@@ -1,6 +1,7 @@
 import { createBot } from "@builderbot/bot";
 import { PORT } from "./config/environment";
 import { adapterDB } from "./database";
+import "./database/Config/init";
 import { adapterProvider } from "./provider";
 import { adapterFlow } from "./flow/index";
 import { initializeBlacklist, isBlacklisted } from "./flow/blacklistSetup";

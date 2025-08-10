@@ -2,13 +2,15 @@ import { addKeyword, EVENTS } from "@builderbot/bot";
 import { xiaomiAuthOnFlow } from "./options/xiaomi1-auth-on.flow";
 import { xiaomiFrpResetFlow } from "./options/xiaomi2-frp-reset.flow";
 import { removerCuentaRaizFlow } from "./options/xiaomi3-remover-cuenta-raiz.flow";
+import { pixelfrpFlow } from "./options/pixel-frp.flow";
 import { reset, start, stop } from "../../../idle-custom";
 import { menuBotFlow } from "../../menu-bot.flow"; // Importamos el menú principal
 
 const menuXiaomi = {
     "1": xiaomiAuthOnFlow,
     "2": xiaomiFrpResetFlow,
-    "3": removerCuentaRaizFlow
+    "3": removerCuentaRaizFlow,
+    "4": pixelfrpFlow
 };
 
 export const opcion5xiaomiMenuFlow = addKeyword(EVENTS.ACTION)
@@ -18,6 +20,7 @@ export const opcion5xiaomiMenuFlow = addKeyword(EVENTS.ACTION)
         "*1* Auth",
         "*2* FRP-Reset Sindeload",
         "*3* Mi Account Lock Remove",
+        "*4* pixel frp",
         "*#* Menú principal 🔄"
     ],
     { capture: true },
@@ -43,5 +46,6 @@ export const opcion5xiaomiMenuFLOWS = [
     opcion5xiaomiMenuFlow,
     xiaomiAuthOnFlow,
     xiaomiFrpResetFlow,
-    removerCuentaRaizFlow
+    removerCuentaRaizFlow,
+    pixelfrpFlow
 ];

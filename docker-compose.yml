@@ -1,28 +1,79 @@
+version: '3.9'
+
 services:
   bot-unlock-magic-service:
-    container_name: bot_unlock_magic_container
-    image: bot-unlock-magic-service
+    container_name: bot_unlock
+    image: bot-unloc-service
     build:
       context: .
       dockerfile: Dockerfile
     extra_hosts:
       - host.docker.internal:host-gateway
-    network_mode: host    
+    networks:
+      - my-network
+    ports:
+      - "3007:3006"
     restart: always
     environment:
-      MYSQL_DB_HOST: localhost
-      MYSQL_DB_USER: bots_admin
-      MYSQL_DB_NAME: bots_db
-      MYSQL_DB_PASSWORD: jctwzt&XH2
+      MYSQL_DB_HOST: db
+      MYSQL_DB_USER: ${MYSQL_DB_USER}
+      MYSQL_DB_NAME: ${MYSQL_DB_NAME}
+      MYSQL_DB_PASSWORD: ${MYSQL_DB_PASSWORD}
       MYSQL_DB_PORT: 3306
-      WHATSAPP_CHAT_GROUP_ID: 120363298355639950@g.us
-      PORT: 3006
-      BOT_NAME: BOT UNLOCK MAGIC
-      URL_GOOGLE_CONTACTS_API: "http://localhost:4000/google/contacts"
+      WHATSAPP_CHAT_GROUP_ID: ${WHATSAPP_CHAT_GROUP_ID}
+      PORT: ${PORT}
+      BOT_NAME: ${BOT_NAME}
+      URL_GOOGLE_CONTACTS_API: ${URL_GOOGLE_CONTACTS_API}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_ASSISTANT_ID: ${OPENAI_ASSISTANT_ID}
     env_file:
       - .env
     logging:
       driver: "json-file"
       options:
-        max-size: "10m"   # Limita el tamaño máximo de los logs a 10MB
-        max-file: "3"     # Mantiene 3 archivos de logs
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_DB_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB_NAME}
+      MYSQL_USER: ${MYSQL_DB_USER}
+      MYSQL_PASSWORD: ${MYSQL_DB_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - my-network
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: ${MYSQL_DB_USER}
+      PMA_PASSWORD: ${MYSQL_DB_PASSWORD}
+      PMA_ARBITRARY: 1
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    restart: always
+    networks:
+      - my-network
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  my-network:
+    driver: bridge

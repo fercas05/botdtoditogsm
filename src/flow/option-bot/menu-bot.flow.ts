@@ -35,7 +35,7 @@ export const menuBotFlow = addKeyword(EVENTS.ACTION)
         '*2* agregar credito a la web',
         '*3* motorola',
         '*4* nokia',
-        '*5* xiaomi',
+        '*5* xiaomi / pixel',
         '*6* aplee bypass',
         '*7* renta box',
         '*8* *frp key / honor*',

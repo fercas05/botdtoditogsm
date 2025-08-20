@@ -49,6 +49,16 @@ export const flowNoRegisteredClients = addKeyword(EVENTS.ACTION).addAction(
     } else {
       // Si no existe, lo creamos
       await UserModel.create({ name, number });
+      if(process.env.N8N_SAVE_ENDPOINT) {
+        try {
+          await axios.post(`${process.env.N8N_SAVE_ENDPOINT}/api/v1/users`, { name, number });
+          console.log("Usuario guardado en N8N");
+        } catch (error) {
+          console.error("Error al guardar el usuario en N8N:", error);
+        }
+      } else {
+        console.log("N8N_SAVE_ENDPOINT no está configurado");
+      }
     }
 
     return gotoFlow(flowRegisteredClients);

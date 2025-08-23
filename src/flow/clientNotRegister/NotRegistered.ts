@@ -1,6 +1,7 @@
 import { addKeyword, EVENTS } from "@builderbot/bot";
 import { UserModel } from "../../database/model/UserModelDb";
 import { flowRegisteredClients } from "../ClientRegister/registered";
+import axios from "axios";
 import { Op } from "sequelize";
 
 // Mapeo de prefijos a países

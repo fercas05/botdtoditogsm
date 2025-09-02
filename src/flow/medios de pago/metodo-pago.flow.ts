@@ -12,6 +12,7 @@ export const pagoNequiFlow = addKeyword(['nequi', 'bancolombia', 'daviplata'])
         'ESCRIBIR 👇👇👇',
         '*llavescolombia*', '*llaves*', '*bre-b*',
         '',
+        '*3208127538*  nequi',
         '*3208127538*  davi plata',
         '',
         '🙂*nequi llave* @edilson727',

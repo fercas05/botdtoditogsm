@@ -4,24 +4,51 @@ import { flowRegisteredClients } from "../ClientRegister/registered";
 import axios from "axios";
 import { Op } from "sequelize";
 
-// Mapeo de prefijos a países
-const countryCodes: Record<string, string> = {
-  "593": "ec", "591": "bo", "57": "co", "52": "mx", "51": "pe",
-  "54": "ar", "505": "ni", "504": "hn", "506": "cr", "507": "pa",
-  "53": "cu", "56": "cl", "55": "br", "58": "ve", "1": "us", "34": "es"
+// Mapeo de prefijos a países y sus emojis
+const countryCodes: Record<string, { code: string, emoji: string }> = {
+  "593": { code: "ec", emoji: "🇪🇨" }, 
+  "591": { code: "bo", emoji: "🇧🇴" }, 
+  "57": { code: "co", emoji: "🇨🇴" }, 
+  "52": { code: "mx", emoji: "🇲🇽" }, 
+  "51": { code: "pe", emoji: "🇵🇪" },
+  "54": { code: "ar", emoji: "🇦🇷" }, 
+  "505": { code: "ni", emoji: "🇳🇮" }, 
+  "504": { code: "hn", emoji: "🇭🇳" }, 
+  "506": { code: "cr", emoji: "🇨🇷" }, 
+  "507": { code: "pa", emoji: "🇵🇦" },
+  "53": { code: "cu", emoji: "🇨🇺" }, 
+  "56": { code: "cl", emoji: "🇨🇱" }, 
+  "55": { code: "br", emoji: "🇧🇷" }, 
+  "58": { code: "ve", emoji: "🇻🇪" }, 
+  "1": { code: "us", emoji: "🇺🇸" }, 
+  "34": { code: "es", emoji: "🇪🇸" },
+  "1-268": { code: "ag", emoji: "🇦🇬" },   // Antigua y Barbuda
+  "1-242": { code: "bs", emoji: "🇧🇸" },   // Bahamas
+  "1-246": { code: "bb", emoji: "🇧🇧" },   // Barbados       // Cuba
+  "1-809": { code: "do", emoji: "🇩🇴" },   // República Dominicana
+  "1-473": { code: "gd", emoji: "🇬🇩" },   // Granada
+  "509": { code: "ht", emoji: "🇭🇹" },      // Haití
+  "1-876": { code: "jm", emoji: "🇯🇲" },   // Jamaica
+  "1-787": { code: "pr", emoji: "🇵🇷" },   // Puerto Rico
+  "1-869": { code: "kn", emoji: "🇰🇳" },   // San Cristóbal y Nieves
+  "1-784": { code: "vc", emoji: "🇻🇨" },   // San Vicente y las Granadinas
+  "1-868": { code: "tt", emoji: "🇹🇹" },   // Trinidad y Tobago
+  "592": { code: "gy", emoji: "🇬🇾" },     // Guyana
+  "597": { code: "sr", emoji: "🇸🇷" },     // Surinam
+  "500": { code: "fk", emoji: "🇫🇰" },     // Islas Malvinas     // Islas Georgias del Sur
 };
 
-// Función para extraer el código del país desde el número
-function getCountryCode(number: string): string {
+// Función para extraer el código del país desde el número y el emoji
+function getCountryCode(number: string): { code: string, emoji: string } {
   const sortedCodes = Object.keys(countryCodes).sort((a, b) => b.length - a.length);
   const prefix = sortedCodes.find(code => number.startsWith(code));
-  return countryCodes[prefix || ""] || "xx";
+  return countryCodes[prefix || ""] || { code: "xx", emoji: "🏳️" };
 }
 
 export const flowNoRegisteredClients = addKeyword(EVENTS.ACTION).addAction(
   async (ctx, { gotoFlow }) => {
     const number = ctx.from;
-    const country = getCountryCode(number);
+    const { code, emoji } = getCountryCode(number);
     let name = ctx.pushName?.trim();
 
     const existingUser = await UserModel.findOne({ where: { number } });
@@ -35,10 +62,10 @@ export const flowNoRegisteredClients = addKeyword(EVENTS.ACTION).addAction(
           },
         },
       });
-      name = `cliente${count + 1}_${country}`;
+      name = `cliente${count + 1}_${code} ${emoji}`;
     } else {
-      // Si tiene nombre, agregamos el sufijo del país
-      name = `${name}_${country}`;
+      // Si tiene nombre, agregamos el sufijo del país con el emoji
+      name = `${name}_${code} ${emoji}`;
     }
 
     if (existingUser) {
@@ -50,7 +77,7 @@ export const flowNoRegisteredClients = addKeyword(EVENTS.ACTION).addAction(
     } else {
       // Si no existe, lo creamos
       await UserModel.create({ name, number });
-      if(process.env.N8N_SAVE_ENDPOINT) {
+      if (process.env.N8N_SAVE_ENDPOINT) {
         try {
           await axios.post(`${process.env.N8N_SAVE_ENDPOINT}`, { name, number });
           console.log("Usuario guardado en N8N");

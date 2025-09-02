@@ -1,6 +1,6 @@
 import { addKeyword, EVENTS } from "@builderbot/bot";
 import { IProvider } from "../../provider";
-import { BaileysProvider } from "@builderbot/provider-baileys";
+import { BaileysProvider } from "aurik3-provider-baileys";
 import { menuWelcomeFlow } from "../menuWelcome.flow";
 import axios from "axios";
 

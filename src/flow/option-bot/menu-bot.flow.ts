@@ -10,6 +10,7 @@ import { opcion8FrpKeyServicioOnlineInstanteFlow } from "./menu-bot-options/opti
 import { opcion9samsungOnlineFlow, opcion9SamsungOnlineMenuFLOWS } from "./menu-bot-options/option-9-samsung-online/option-9-samsung-online.flow";
 import { opcionOperadoresColombiaMenuFLOWS, opcionOperadoresColombiaMenuFlow } from "./menu-bot-options/oction-registros-A/oction-operadores.flow";
 import { AnydeskFlow } from "./menu-bot-options/oction-remoto/remoto.flow";
+import { utilidadesFlow } from "./menu-bot-options/utilidades/optionutilidades.flow";
 import { stop, reset, start } from "../idle-custom";
 
 const menuBotFlows = {
@@ -23,7 +24,8 @@ const menuBotFlows = {
     "8": opcion8FrpKeyServicioOnlineInstanteFlow,
     "9": opcion9samsungOnlineFlow,
     "A": opcionOperadoresColombiaMenuFlow,
-    "B": AnydeskFlow
+    "B": AnydeskFlow,
+    "C": utilidadesFlow
 }
 
 export const menuBotFlow = addKeyword(EVENTS.ACTION)
@@ -42,6 +44,7 @@ export const menuBotFlow = addKeyword(EVENTS.ACTION)
         '*9* samsung',
         '*A* no registros 🇨🇴',
         '*B* remoto any',
+        '*C* utilidades',
     ],
 { capture: true },
 async (ctx, { fallBack, gotoFlow, provider, endFlow }) => {
@@ -72,5 +75,6 @@ export const menuBotFLOWS = [
     opcion8FrpKeyServicioOnlineInstanteFlow,
     ...opcion9SamsungOnlineMenuFLOWS,
     ...opcionOperadoresColombiaMenuFLOWS,
-    AnydeskFlow
+    AnydeskFlow,
+    utilidadesFlow
 ];

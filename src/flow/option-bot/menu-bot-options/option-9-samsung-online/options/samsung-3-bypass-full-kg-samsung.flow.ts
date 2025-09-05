@@ -16,7 +16,7 @@ export const byPassFullKgSamsung = addKeyword(EVENTS.ACTION)
     '',
     '*2.* Copiar el *DNS* y pegarlo en el *USB Redirector 1.9.7.exe*:',
     '👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽',
-    'DNS: *kgsam.ddns.net* (sin "https://")',
+    'DNS: *kgsam.ddnz.me* (sin "https://")',
     '',
     '*3.* Realizar *hard reset* y conectar en la pantalla de bienvenida.',
     '',

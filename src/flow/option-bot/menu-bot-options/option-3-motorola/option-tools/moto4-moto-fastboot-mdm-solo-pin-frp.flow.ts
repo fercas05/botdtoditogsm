@@ -14,7 +14,7 @@ export const motoFastSoloPinFlow = addKeyword(EVENTS.ACTION)
         '*2* copiamos DNS y pegamos en el *usb redirector*',
 
         'pegar este sin *https://*',
-        'solo DNS👉🏽 *motofrpmdm.ddns.net*',
+        'solo DNS👉🏽 *motofrpmdm.ddnz.me*',
         '',
         '*3* 💻 *CONEXION*',
         '',

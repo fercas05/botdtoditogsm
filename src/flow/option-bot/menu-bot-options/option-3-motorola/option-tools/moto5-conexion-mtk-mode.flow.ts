@@ -34,7 +34,7 @@ export const conexionMtkModeFlow = addKeyword(EVENTS.ACTION)
         '',
 
         '*3* *CONEXION* ',
-        'dns *motog23.ddns.net*',
+        'dns *motog23.ddnz.me*',
         'g13-g23 *meta*',
         'e13 *fastboot*',
         '',

@@ -25,7 +25,7 @@ export const mtkMotoModeFlow = addKeyword(EVENTS.ACTION)
 'https://www.youtube.com/watch?v=apPFdjoPvmc',
 '',
 '*2* copiamos DNS y pegamos en el *usb redirector*',
-'DNS 1 *spdmtk.ddns.net*',
+'DNS 1 *spdmtk.ddnz.me*',
 'DNS 2 *Mtkspd.ddns.me:32039*',
 '',
 '*CONEXION*',

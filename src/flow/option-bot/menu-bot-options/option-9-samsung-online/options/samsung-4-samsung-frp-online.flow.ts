@@ -13,7 +13,7 @@ export const samsungFrpOnlineDosFlow = addKeyword(EVENTS.ACTION)
         '',
         '*DNS* pegar este sin *https://*',
         '👇🏽 👇🏽 👇🏽 👇🏽 👇🏽 👇🏽',
-        'DNS ❤ *frpsam.ddns.net*',
+        'DNS ❤ *frpsam.ddnz.me*',
         '',
         '*3* *CONEXION*',
         '*hart reset* *⚙conectamos en bienvenida*',

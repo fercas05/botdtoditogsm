@@ -7,7 +7,6 @@ export const samsungFrpImeiFlow = addKeyword(EVENTS.ACTION)
         '✅ *SI HAY REEMBOLSO*',
         '✅ *BLACK LIST SOPORTADO*',
         '✅ *KG SOPORTADO*',
-        '✅ SERIE S25 *24USD*',
         '',
         '⚠️ *NO SOPORTADOS FRP POR IMEI*',
         '❌ SM-A107F/DS',
@@ -20,9 +19,11 @@ export const samsungFrpImeiFlow = addKeyword(EVENTS.ACTION)
         '❌ SM-A226B/DS',
         '❌ SM-A055M/DS',
         '❌ SM-A042M/DS',
+        '❌ ANDROID 15 ❌*',
         '',
     ])
     .addAnswer([
         '⏱ *Tiempo*: 1-10 min',
-        '*Enviar*: Pago + IMEIS / SN'
+        '*Enviar*: Pago + IMEIS / SN',
+        'leer android tools https://mega.nz/file/zVlCXAaT#Hg0emghbylL_s3IZVWoRMFKywqYkg4ITDQmkdwjjRHc',
     ]);

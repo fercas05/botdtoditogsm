@@ -24,6 +24,8 @@ export const pagoNequiFlow = addKeyword(['nequi', 'bancolombia', 'daviplata'])
         '💚*enviar *QR* para comprobar pago*',
         '',
         '*cuenta personales no terceros*',
+
+        '*cargar automatico* https://youtu.be/G_o_oKX_qOo',
         
     ])
     .addAnswer(['@edilson727'])

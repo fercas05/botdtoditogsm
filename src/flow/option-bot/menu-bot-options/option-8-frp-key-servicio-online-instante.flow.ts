@@ -20,5 +20,8 @@ export const opcion8FrpKeyServicioOnlineInstanteFlow = addKeyword(EVENTS.ACTION)
         '',
         'usar comando minimal para frp 👇',
         'fastboot oem frp-unlock *A34N6R411601XXXX*',
+        '',
+        '*video tutorial👇*',
+        'https://www.youtube.com/watch?v=LSrjHLnu8Dw&feature=youtu.be',
 
     ])

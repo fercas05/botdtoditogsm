@@ -9,8 +9,9 @@ export const xiaomiFrpResetFlow = addKeyword(EVENTS.ACTION)
         '*video tutorial conectar usb 1.9*',
         'https://www.youtube.com/watch?v=apPFdjoPvmc',
         '',
-        '*2* copiamos *DNS👉🏽* *xiaomifrp.ddns.net* y pegamos al *usb**',
-
+        '*2* copiamos *DNS*y pegamos al *usb**',
+        '*xiaomifrp1.ddns.net*',
+        '*xiaomifrp2.ddns.net*',
         '',
         '*3* conectar en sindeload - my asistente',
         '',

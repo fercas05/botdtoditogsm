@@ -11,7 +11,7 @@ export const xiaomiAuthOnFlow = addKeyword(EVENTS.ACTION)
         'preguntar que tools',
 
         '1 *reiniciar pc antes de cada proceso*',
-        '2 *⚠️⚠️ borrar provision.xlm de la eng o global*',
+        '2 *⚠️borrar provision.xlm de la eng o global*',
         '3 *Cuenta mi off*',
         '4 *Batería al 50%*',
         '5 *Firmware listo✅*',

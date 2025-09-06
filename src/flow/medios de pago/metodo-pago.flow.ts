@@ -25,7 +25,7 @@ export const pagoNequiFlow = addKeyword(['nequi', 'bancolombia', 'daviplata'])
         '',
         '*cuenta personales no terceros*',
         '',
-        'cargar automatico *24/7* https://youtu.be/G_o_oKX_qOo',
+        'cargar automatico *24/7* https://youtu.be/G_o_oKX_qOo?si=AA9ySKrm0scH54qv',
         
     ])
     .addAnswer(['@edilson727'])

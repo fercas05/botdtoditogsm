@@ -1,4 +1,4 @@
-import * as colors  from "colors";
+import colors from "colors";
 import { Sequelize } from "sequelize";
 import { DB_LOG, MYSQL_DB_HOST, MYSQL_DB_NAME, MYSQL_DB_PASSWORD, MYSQL_DB_PORT, MYSQL_DB_USER } from "../../config/environment";
 
@@ -18,10 +18,10 @@ export async function checkConnection() {
   try {
     await dbInstance.authenticate();
     console.log(
-      colors.bgBlue(`🚩 CONEXIÓN DB ${MYSQL_DB_NAME} WITH MySQL 🚩`).white
+      colors.bgBlue(`🚩 CONEXIÓN DB ${MYSQL_DB_NAME} WITH MySQL 🚩`)
     );
   } catch (error) {
-    console.log(colors.bgRed(`🚩 ERROR DB ${MYSQL_DB_NAME} WITH MySQL 🚩`).white, error);
+    console.log(colors.bgRed(`🚩 ERROR DB ${MYSQL_DB_NAME} WITH MySQL 🚩`), error);
   }
 }
 

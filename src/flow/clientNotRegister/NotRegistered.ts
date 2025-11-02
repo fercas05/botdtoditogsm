@@ -3,6 +3,7 @@ import { UserModel } from "../../database/model/UserModelDb";
 import { flowRegisteredClients } from "../ClientRegister/registered";
 import axios from "axios";
 import { Op } from "sequelize";
+import { getPhoneFromContext } from "../../utils/jidHelper";
 
 // Mapeo de prefijos a países y sus emojis
 const countryCodes: Record<string, { code: string, emoji: string }> = {
@@ -47,7 +48,8 @@ function getCountryCode(number: string): { code: string, emoji: string } {
 
 export const flowNoRegisteredClients = addKeyword(EVENTS.ACTION).addAction(
   async (ctx, { gotoFlow }) => {
-    const number = ctx.from;
+    // Extract clean phone number from JID (handles both @lid and @s.whatsapp.net formats)
+    const number = getPhoneFromContext(ctx);
     const { code, emoji } = getCountryCode(number);
     let name = ctx.pushName?.trim();
 

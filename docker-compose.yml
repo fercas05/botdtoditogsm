@@ -27,6 +27,7 @@ services:
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       OPENAI_ASSISTANT_ID: ${OPENAI_ASSISTANT_ID}
       N8N_SAVE_ENDPOINT: ${N8N_SAVE_ENDPOINT}
+      SESSION_PATH: /app/bot_sessions
     env_file:
       - .env
     logging:

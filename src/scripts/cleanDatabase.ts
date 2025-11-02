@@ -49,14 +49,36 @@ async function cleanDatabase() {
     
     console.log(colors.cyan(`📊 Total users in database: ${stats.total}\n`));
     
-    // Step 1: Group users to detect duplicates
+    // Step 1: Filter users that need processing (those with @ in number)
+    const usersToProcess = allUsers.filter(user => user.number.includes('@'));
+    
+    if (usersToProcess.length === 0) {
+      console.log(colors.green("✅ All users already have clean phone numbers!"));
+      console.log(colors.cyan(`📊 All ${stats.total} users are correctly formatted.\n`));
+      
+      // Show sample
+      const sampleUsers = await UserModel.findAll({ limit: 5 });
+      console.log(colors.yellow("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"));
+      console.log(colors.cyan("📋 Sample of users:\n"));
+      sampleUsers.forEach(user => {
+        console.log(colors.gray(`   ${user.id}. ${user.name} → ${user.number}`));
+      });
+      console.log(colors.yellow("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"));
+      console.log(colors.green("✨ Database is already clean! No changes needed.\n"));
+      process.exit(0);
+    }
+    
+    console.log(colors.yellow(`⚠️  Found ${usersToProcess.length} users with @ format that need processing\n`));
+    
+    // Step 2: Group users to detect duplicates
     console.log(colors.yellow("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"));
     console.log(colors.yellow("📋 STEP 1: Analyzing database...\n"));
     
     // Map to store: phoneNumber -> [users with that number]
+    // Only process users that have @ in their number
     const phoneMap = new Map<string, typeof allUsers>();
     
-    for (const user of allUsers) {
+    for (const user of usersToProcess) {
       try {
         // Extract clean phone number (handles @lid conversion)
         const cleanPhone = extractPhoneNumber(user.number);
@@ -71,7 +93,7 @@ async function cleanDatabase() {
       }
     }
     
-    // Step 2: Process each phone number group
+    // Step 3: Process each phone number group (only those that need it)
     console.log(colors.yellow("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"));
     console.log(colors.yellow("📋 STEP 2: Processing users...\n"));
     

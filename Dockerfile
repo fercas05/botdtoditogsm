@@ -29,6 +29,7 @@ EXPOSE $PORT
 # Copy built application files
 COPY --from=builder /app/assets ./assets
 COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/src ./src
 COPY --from=builder /app/*.json /app/*-lock.yaml ./
 
 # Copy the .env file
@@ -37,7 +38,10 @@ COPY .env ./
 RUN corepack enable && corepack prepare pnpm@latest --activate 
 ENV PNPM_HOME=/usr/local/bin
 
-RUN npm cache clean --force && pnpm install --production --ignore-scripts \
+# Install production dependencies + tsx for running scripts
+RUN apk add --no-cache git \
+    && npm cache clean --force && pnpm install --production --ignore-scripts \
+    && pnpm add -D tsx \
     && addgroup -g 1001 -S nodejs && adduser -S -u 1001 nodejs \
     && rm -rf $PNPM_HOME/.npm $PNPM_HOME/.node-gyp
 

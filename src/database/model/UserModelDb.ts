@@ -14,12 +14,13 @@ interface UserAttributes {
 type UserCreationAttributes = Optional<UserAttributes, "id" | "createdAt" | "updatedAt">;
 
 // 3. Crea la clase que extiende Model con los tipos
+// No declaramos los campos aquí para evitar shadowing de los getters/setters de Sequelize
 class User extends Model<UserAttributes, UserCreationAttributes> implements UserAttributes {
-  public id!: number;
-  public name!: string;
-  public number!: string;
-  public readonly createdAt!: Date;
-  public readonly updatedAt!: Date;
+  declare id: number;
+  declare name: string;
+  declare number: string;
+  declare readonly createdAt: Date;
+  declare readonly updatedAt: Date;
 }
 
 // 4. Define el modelo

@@ -12,6 +12,8 @@ services:
     ports:
       - "3007:3006"
     restart: always
+    volumes:
+      - whatsapp_sessions:/app/bot_sessions
     environment:
       MYSQL_DB_HOST: db
       MYSQL_DB_USER: ${MYSQL_DB_USER}
@@ -50,6 +52,8 @@ services:
       - mysql_data:/var/lib/mysql
     networks:
       - my-network
+    env_file:
+      - .env
     restart: always
     healthcheck:
       test:
@@ -88,6 +92,8 @@ services:
 
 volumes:
   mysql_data:
+    driver: local
+  whatsapp_sessions:
     driver: local
 
 networks:

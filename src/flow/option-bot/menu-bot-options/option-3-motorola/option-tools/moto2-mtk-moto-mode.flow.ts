@@ -5,7 +5,7 @@ export const mtkMotoModeFlow = addKeyword(EVENTS.ACTION)
     '*CONEXION MTK METAMODE*',
     '',
     '*1*   *DESCARGAR*',
-    'https://www.mediafire.com/file/akgqz3fl23v1qmn/ModemMETA_v10.2044.0.02.zip/file',
+    'https://mega.nz/file/7MsRiJ6A#RwcATxfWOJobTEse805NZ11jLWEZXkkO_ML-6Tdf2Bw',
     '',
      '*ejecutamos y activamos*',
      '',

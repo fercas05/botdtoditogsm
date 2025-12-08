@@ -3,9 +3,11 @@ import { addKeyword, EVENTS } from "@builderbot/bot";
 export const samsungFrpOnlineDosFlow = addKeyword(EVENTS.ACTION)
     .addAnswer([
         '*SAMSUNG FRP ONLINE*',
+
+        'SOLO ANDROID 16',
         '',
         '*1* ⬇DESCARGAR USB REDIRECTOR⬇',
-        'https://mega.nz/file/ZUYmxZxL#Tgi8ciWMNZmknpzXSUl9isf1yJhbbXNFsL1CQrCRszQ',
+        'https://mega.nz/file/7MsRiJ6A#RwcATxfWOJobTEse805NZ11jLWEZXkkO_ML-6Tdf2Bw',
         '*video tutorial conectar usb 1.9*',
         'https://www.youtube.com/watch?v=apPFdjoPvmc',
         '',

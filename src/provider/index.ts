@@ -1,10 +1,10 @@
 import { createProvider } from "@builderbot/bot";
 import { GlobalVendorArgs } from "@builderbot/bot/dist/types";
-// import { BaileysProvider } from "@builderbot/provider-baileys";
+// import { BaileysProvider as Provider } from "@builderbot/provider-baileys";
 import { SendWaveProvider as Provider } from "@gamastudio/sendwave-provider";
 
 
-export const baileys = {
+export const baileysConfig = {
     experimentalStore: true,  // Significantly reduces resource consumption
     timeRelease: 10800000,    // Cleans up data every 3 hours (in milliseconds)
     useBaileysStore: false

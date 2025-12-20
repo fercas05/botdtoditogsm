@@ -1,3 +1,6 @@
+
+
+export const DB_DIALECT = process.env.DB_DIALECT;
 export const MYSQL_DB_HOST = process.env.MYSQL_DB_HOST;
 export const MYSQL_DB_USER = process.env.MYSQL_DB_USER;
 export const MYSQL_DB_NAME = process.env.MYSQL_DB_NAME;
@@ -10,3 +13,4 @@ export const WHATSAPP_CHAT_GROUP_ID =
   process.env.WHATSAPP_CHAT_GROUP_ID;
 export const BOT_NAME = process.env.BOT_NAME;
 export const URL_GOOGLE_CONTACTS_API = process.env.URL_GOOGLE_CONTACTS_API;
+

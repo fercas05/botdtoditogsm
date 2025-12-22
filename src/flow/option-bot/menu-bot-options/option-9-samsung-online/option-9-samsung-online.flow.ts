@@ -27,7 +27,7 @@ export const opcion9samsungOnlineFlow = addKeyword(EVENTS.ACTION)
         { capture: true },
         async (ctx, { fallBack, gotoFlow, provider, endFlow }) => {
             reset(ctx, gotoFlow, 20000);
-            await provider.vendor.readMessages([ctx.key]);
+            // await provider.vendor.readMessages([ctx.key]);
 
             const flow = menuSamsungFlows[ctx.body.toLowerCase()];
 

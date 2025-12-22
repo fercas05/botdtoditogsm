@@ -27,7 +27,7 @@ export const menuWelcomeFlow = addKeyword(EVENTS.ACTION)
     ], { capture: true },
         async (ctx, { gotoFlow, provider, endFlow }) => {
             reset(ctx, gotoFlow, 20000)
-            await provider.vendor.readMessages([ctx.key]);
+            // await provider.vendor.readMessages([ctx.key]);
 
             const flow = menuWelcomeFlows[ctx.body.toLowerCase()];
 

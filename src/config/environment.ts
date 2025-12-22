@@ -14,3 +14,5 @@ export const WHATSAPP_CHAT_GROUP_ID =
 export const BOT_NAME = process.env.BOT_NAME;
 export const URL_GOOGLE_CONTACTS_API = process.env.URL_GOOGLE_CONTACTS_API;
 
+export const SENDWAVE_API_KEY = process.env.SENDWAVE_API_KEY;
+export const SENDWAVE_INSTANCE_NAME = process.env.SENDWAVE_INSTANCE_NAME;

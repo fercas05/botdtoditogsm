@@ -27,7 +27,6 @@ ENV PORT $PORT
 EXPOSE $PORT
 
 # Copy built application files
-COPY --from=builder /app/assets ./assets
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/src ./src
 COPY --from=builder /app/*.json /app/*-lock.yaml ./

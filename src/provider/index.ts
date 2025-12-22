@@ -17,8 +17,7 @@ export const sendwaveConfig: GlobalVendorArgs = {
   apiKey: SENDWAVE_API_KEY || "",
   name: SENDWAVE_INSTANCE_NAME || "",
   port: parseInt(process.env.PORT || "3006"),
-  readMessages: true,
-  url:"http://localhost:1212",
+  readMessages: true
 };
 
 export type IProvider = typeof Provider;

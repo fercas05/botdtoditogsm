@@ -7,32 +7,36 @@ import { adapterFlow } from "./flow/index";
 import { initializeBlacklist, isBlacklisted } from "./flow/blacklistSetup";
 
 const main = async () => {
-    const bot = await createBot({
-        flow: adapterFlow,
-        provider: adapterProvider,
-        database: adapterDB,
-    });
+  const bot = await createBot({
+    flow: adapterFlow,
+    provider: adapterProvider,
+    database: adapterDB,
+  });
 
-    // Inicializa la lista negra al iniciar el bot
-    initializeBlacklist();
+  // Inicializa la lista negra al iniciar el bot
+  initializeBlacklist();
 
-    const { httpServer, provider } = bot;
+  const { httpServer, provider } = bot;
 
-    // Evento para verificar si el mensaje proviene de un número en la blacklist
-    provider.on("receive_message", async ({ from, body, name }) => {
-        if (isBlacklisted(from)) {
-            console.log(`Mensaje bloqueado de ${from} (en la lista negra)`);
-            return; // Detiene el procesamiento del mensaje si el número está en la lista negra
-        }
-        console.log(`Mensaje recibido de ${from}: ${body}`);
-        // Aquí sigue el procesamiento normal de mensajes para números que no están en la lista negra
-    });
+  // Evento para verificar si el mensaje proviene de un número en la blacklist
+  provider.on("receive_message", async ({ from, body, name }) => {
+    if (isBlacklisted(from)) {
+      console.log(`Mensaje bloqueado de ${from} (en la lista negra)`);
+      return; // Detiene el procesamiento del mensaje si el número está en la lista negra
+    }
+    console.log(`Mensaje recibido de ${from}: ${body}`);
+    // Aquí sigue el procesamiento normal de mensajes para números que no están en la lista negra
+  });
 
-    bot.on("send_message", ({ answer, from }) => {
-        console.log(`Send Message Payload:`, { answer, from });
-    });
+  provider.on("flow-message", (body) => {
+    console.log(`Flow Message Payload:`, body);
+  });
 
-    httpServer(+PORT);
+  bot.on("send_message", ({ answer, from }) => {
+    console.log(`Send Message Payload:`, { answer, from });
+  });
+
+  httpServer(+PORT);
 };
 
 main();

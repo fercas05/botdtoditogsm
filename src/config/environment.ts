@@ -1,5 +1,7 @@
 
 
+export const SENDWAVE_URL = process.env.SENDWAVE_URL;
+
 export const DB_DIALECT = process.env.DB_DIALECT;
 export const MYSQL_DB_HOST = process.env.MYSQL_DB_HOST;
 export const MYSQL_DB_USER = process.env.MYSQL_DB_USER;

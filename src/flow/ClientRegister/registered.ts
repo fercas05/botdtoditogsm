@@ -6,7 +6,7 @@ import axios from "axios";
 export const flowRegisteredClients = addKeyword<BaileysProvider>(
   EVENTS.ACTION
 ).addAction(async (ctx, { flowDynamic, gotoFlow, provider }) => {
-  const name = ctx.pushName || "Cliente";
+  const name = ctx.name || "Cliente";
   
   // Array de 8 saludos aleatorios
   const greetings = [

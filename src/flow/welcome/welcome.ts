@@ -14,6 +14,8 @@ export const flowWelcome = addKeyword(['BUENAS', 'Buenas', 'buenas',
     'qué tal', 'Qué tal', 'QUÉ TAL']).addAction(
   async (ctx, { gotoFlow }) => {
     try {
+      console.log(ctx);
+      
       // Extract clean phone number from JID (handles both @lid and @s.whatsapp.net formats)
       const phoneNumber = getPhoneFromContext(ctx);
       const data = await getData({ number: phoneNumber }, UserModel);

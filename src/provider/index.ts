@@ -5,7 +5,7 @@ import {
   SendWaveProvider as Provider,
   GlobalVendorArgs,
 } from "@gamastudio/sendwave-provider";
-import { SENDWAVE_API_KEY, SENDWAVE_INSTANCE_NAME } from "~/config/environment";
+import { SENDWAVE_API_KEY, SENDWAVE_INSTANCE_NAME, SENDWAVE_URL } from "~/config/environment";
 
 export const baileysConfig = {
   experimentalStore: true, // Significantly reduces resource consumption
@@ -17,7 +17,8 @@ export const sendwaveConfig: GlobalVendorArgs = {
   apiKey: SENDWAVE_API_KEY || "",
   name: SENDWAVE_INSTANCE_NAME || "",
   port: parseInt(process.env.PORT || "3006"),
-  readMessages: true
+  readMessages: true,
+  url: SENDWAVE_URL,
 };
 
 export type IProvider = typeof Provider;

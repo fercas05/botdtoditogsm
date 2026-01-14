@@ -1,13 +1,13 @@
 import { addKeyword, EVENTS } from "@builderbot/bot";
 import { BaileysProvider } from "@builderbot/provider-baileys";
 import { menuWelcomeFlow } from "../menuWelcome.flow";
-import axios from "axios";
 
 export const flowRegisteredClients = addKeyword<BaileysProvider>(
   EVENTS.ACTION
 ).addAction(async (ctx, { flowDynamic, gotoFlow, provider }) => {
   const name = ctx.name || "Cliente";
-  
+  console.log("Nombre: ", ctx.from);
+
   // Array de 8 saludos aleatorios
   const greetings = [
     `¡Hola *${name}* ¿Cómo estás hoy?`,
@@ -17,16 +17,16 @@ export const flowRegisteredClients = addKeyword<BaileysProvider>(
     `¡Qué alegría verte, *${name}* ¿Cómo te va?`,
     `¡Hola *${name}* ¿Listo para comenzar?`,
     `¡Bienvenido de nuevo, *${name}* ¿En qué podemos colaborar?`,
-    `¡Hola *${name}* Esperamos que tengas un día espectacular.`
+    `¡Hola *${name}* Esperamos que tengas un día espectacular.`,
   ];
-  
-  const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
-  
+
+  const randomGreeting =
+    greetings[Math.floor(Math.random() * greetings.length)];
+
   await flowDynamic(randomGreeting);
-  
+
   return gotoFlow(menuWelcomeFlow);
 });
-
 
 // const saveInGoolgeContact = async (name: string, phone: string, provider: BaileysProvider) => {
 //   const newContact = {

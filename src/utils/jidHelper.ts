@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
+import { PROVIDER } from "~/config/environment";
 
 /**
  * Utility functions to handle WhatsApp JID formats
@@ -106,9 +107,16 @@ export function normalizeToPhoneJID(jid: string): string {
  * @returns The phone number (clean, without @ suffix)
  */
 export function getPhoneFromContext(ctx: any): string {
-  // Fallback: try ctx.key?.remoteJid
-  if (ctx.remoteJid) {
-    return extractPhoneNumber(ctx.remoteJid);
+  // Sendwave
+  if (PROVIDER === "sendwave") {
+    if (ctx.remoteJid) {
+      return extractPhoneNumber(ctx.remoteJid);
+    }
+  } else {
+    // Baileys
+    if (ctx.key?.remoteJid) {
+      return extractPhoneNumber(ctx.key.remoteJid);
+    }
   }
 
   // Last resort: return empty string

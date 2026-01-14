@@ -1,5 +1,3 @@
-
-
 export const SENDWAVE_URL = process.env.SENDWAVE_URL;
 
 export const DB_DIALECT = process.env.DB_DIALECT;
@@ -11,10 +9,10 @@ export const MYSQL_DB_PORT: number = parseInt(process.env.MYSQL_DB_PORT);
 export const PORT: number = parseInt(process.env.PORT) || 3006;
 export const DB_LOG = true;
 export const OPENAI_ASSISTANT_ID = process.env?.OPENAI_ASSISTANT_ID;
-export const WHATSAPP_CHAT_GROUP_ID =
-  process.env.WHATSAPP_CHAT_GROUP_ID;
+export const WHATSAPP_CHAT_GROUP_ID = process.env.WHATSAPP_CHAT_GROUP_ID;
 export const BOT_NAME = process.env.BOT_NAME;
 export const URL_GOOGLE_CONTACTS_API = process.env.URL_GOOGLE_CONTACTS_API;
 
 export const SENDWAVE_API_KEY = process.env.SENDWAVE_API_KEY;
 export const SENDWAVE_INSTANCE_NAME = process.env.SENDWAVE_INSTANCE_NAME;
+export const PROVIDER = process.env.PROVIDER || "sendwave";

@@ -1,19 +1,26 @@
 import { createProvider } from "@builderbot/bot";
-// import { GlobalVendorArgs } from "@builderbot/bot/dist/types";
-// import { BaileysProvider as Provider } from "@builderbot/provider-baileys";
+import { BaileysProvider } from "@builderbot/provider-baileys";
+import { BaileyGlobalVendorArgs } from "@builderbot/provider-baileys/dist/type";
 import {
-  SendWaveProvider as Provider,
+  SendWaveProvider,
   GlobalVendorArgs,
 } from "@gamastudio/sendwave-provider";
-import { SENDWAVE_API_KEY, SENDWAVE_INSTANCE_NAME, SENDWAVE_URL } from "~/config/environment";
+import {
+  PROVIDER,
+  SENDWAVE_API_KEY,
+  SENDWAVE_INSTANCE_NAME,
+  SENDWAVE_URL,
+} from "~/config/environment";
 
-export const baileysConfig = {
-  experimentalStore: true, // Significantly reduces resource consumption
-  timeRelease: 10800000, // Cleans up data every 3 hours (in milliseconds)
+const baileysConfig: Partial<BaileyGlobalVendorArgs> = {
+  experimentalStore: true,
+  timeRelease: 10800000,
+
   useBaileysStore: false,
+  version: [2, 3000, 1031930579],
 };
 
-export const sendwaveConfig: GlobalVendorArgs = {
+const sendwaveConfig: GlobalVendorArgs = {
   apiKey: SENDWAVE_API_KEY || "",
   name: SENDWAVE_INSTANCE_NAME || "",
   port: parseInt(process.env.PORT || "3006"),
@@ -21,5 +28,19 @@ export const sendwaveConfig: GlobalVendorArgs = {
   url: SENDWAVE_URL,
 };
 
-export type IProvider = typeof Provider;
-export const adapterProvider = createProvider(Provider, sendwaveConfig);
+const getProvider = () => {
+  if (PROVIDER === "sendwave") {
+    return {
+      Provider: SendWaveProvider,
+      config: sendwaveConfig,
+    };
+  }
+  return {
+    Provider: BaileysProvider,
+    config: baileysConfig,
+  };
+};
+
+const { Provider, config } = getProvider();
+
+export const adapterProvider = createProvider(Provider as any, config);

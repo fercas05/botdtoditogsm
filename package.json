@@ -5,11 +5,11 @@
 	"main": "dist/app.js",
 	"type": "module",
 	"scripts": {
-		"start": "node --env-file=.env  ./dist/app.js",
+		"start": "node --env-file=.env ./dist/app.js",
 		"lint": "eslint . --no-ignore",
 		"db": "nodemon --env-file=.env src/database/Config/init.ts",
 		"dev": "npm run lint && nodemon --env-file=.env ./src/app.ts",
-		"build": "npx rollup -c",
+		"build": "esbuild src/app.ts --bundle --platform=node --format=esm --outfile=dist/app.js --packages=external",
 		"clean:database": "tsx --env-file=.env src/scripts/cleanDatabase.ts",
 		"migrate:phones": "tsx --env-file=.env src/scripts/migratePhoneNumbers.ts",
 		"fix:duplicates": "tsx --env-file=.env src/scripts/removeDuplicates.ts"
@@ -31,11 +31,10 @@
 		"@types/node": "^20.14.15",
 		"@typescript-eslint/eslint-plugin": "^7.18.0",
 		"@typescript-eslint/parser": "^7.18.0",
+		"esbuild": "^0.25.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-builderbot": "latest",
 		"nodemon": "^3.1.4",
-		"rollup": "^4.20.0",
-		"rollup-plugin-typescript2": "^0.36.0",
 		"tsx": "^4.17.0",
 		"typescript": "^5.5.4"
 	},

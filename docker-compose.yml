@@ -86,7 +86,7 @@ services:
       PMA_PASSWORD: ${MYSQL_DB_PASSWORD}
       PMA_ARBITRARY: 1
     ports:
-      - "8080:80"
+      - "8081:80"
     depends_on:
       db:
         condition: service_healthy

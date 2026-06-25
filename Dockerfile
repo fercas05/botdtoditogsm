@@ -1,47 +1,34 @@
 # Image size ~ 400MB
-FROM node:21-alpine3.18 as builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
-ENV PNPM_HOME=/usr/local/bin
+COPY package*.json ./
+RUN apk add --no-cache git \
+    && npm install
 
 COPY . .
+RUN npm run build
 
-COPY package*.json *-lock.yaml ./
-
-RUN apk add --no-cache --virtual .gyp \
-    python3 \
-    make \
-    g++ \
-    && apk add --no-cache git \
-    && pnpm install && pnpm run build \
-    && apk del .gyp
-
-FROM node:21-alpine3.18 as deploy
+FROM node:22-alpine AS deploy
 
 WORKDIR /app
 
 ARG PORT
-ENV PORT $PORT
+ENV PORT=$PORT
 EXPOSE $PORT
 
-# Copy built application files
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/src ./src
-COPY --from=builder /app/*.json /app/*-lock.yaml ./
-
-# Copy the .env file
+COPY --from=builder /app/package*.json ./
 COPY .env ./
 
-RUN corepack enable && corepack prepare pnpm@latest --activate 
-ENV PNPM_HOME=/usr/local/bin
-
-# Install production dependencies + tsx for running scripts
 RUN apk add --no-cache git \
-    && npm cache clean --force && pnpm install --production --ignore-scripts \
-    && pnpm add -D tsx \
+    && npm install --production \
+    && npm cache clean --force \
     && addgroup -g 1001 -S nodejs && adduser -S -u 1001 nodejs \
-    && rm -rf $PNPM_HOME/.npm $PNPM_HOME/.node-gyp
+    && chown -R nodejs:nodejs /app \
+    && rm -rf /root/.npm /root/.node-gyp /tmp/*
+
+USER nodejs
 
 CMD ["npm", "start"]

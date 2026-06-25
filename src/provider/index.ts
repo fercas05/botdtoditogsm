@@ -7,25 +7,25 @@ import {
 } from "@gamastudio/sendwave-provider";
 import {
   PROVIDER,
-  SENDWAVE_API_KEY,
-  SENDWAVE_INSTANCE_NAME,
-  SENDWAVE_URL,
+  SENDWAVES_API_KEY,
+  SENDWAVES_INSTANCE_NAME,
+  SENDWAVES_URL,
 } from "~/config/environment";
 
 const baileysConfig: Partial<BaileyGlobalVendorArgs> = {
   experimentalStore: true,
   timeRelease: 10800000,
-
   useBaileysStore: false,
-  version: [2, 3000, 1031930579],
+  version: [2, 3000, 1042046268],
 };
 
 const sendwaveConfig: GlobalVendorArgs = {
-  apiKey: SENDWAVE_API_KEY || "",
-  name: SENDWAVE_INSTANCE_NAME || "",
+  apiKey: SENDWAVES_API_KEY || "",
+  name: SENDWAVES_INSTANCE_NAME || "",
   port: parseInt(process.env.PORT || "3006"),
   readMessages: true,
-  url: SENDWAVE_URL,
+  linkPreview: true,
+  url: SENDWAVES_URL,
 };
 
 const getProvider = () => {

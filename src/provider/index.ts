@@ -15,7 +15,7 @@ import {
 const baileysConfig: Partial<BaileyGlobalVendorArgs> = {
   experimentalStore: true,
   timeRelease: 10800000,
-  useBaileysStore: false,
+  useBaileysStore: true,
   version: [2, 3000, 1042256123],
 };
 

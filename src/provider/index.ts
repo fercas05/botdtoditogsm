@@ -9,7 +9,7 @@ import {
   PROVIDER,
   SENDWAVES_API_KEY,
   SENDWAVES_INSTANCE_NAME,
-  SENDWAVES_URL,
+
 } from "~/config/environment";
 
 const baileysConfig: Partial<BaileyGlobalVendorArgs> = {
@@ -25,11 +25,10 @@ const sendwaveConfig: GlobalVendorArgs = {
   port: parseInt(process.env.PORT || "3006"),
   readMessages: true,
   linkPreview: true,
-  url: SENDWAVES_URL,
 };
 
 const getProvider = () => {
-  if (PROVIDER === "sendwave") {
+  if (PROVIDER === "sendwaves") {
     return {
       Provider: SendWaveProvider,
       config: sendwaveConfig,

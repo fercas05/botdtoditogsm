@@ -14,5 +14,4 @@ export const URL_GOOGLE_CONTACTS_API = process.env.URL_GOOGLE_CONTACTS_API;
 
 export const SENDWAVES_API_KEY = process.env.SENDWAVES_API_KEY;
 export const SENDWAVES_INSTANCE_NAME = process.env.SENDWAVES_INSTANCE_NAME;
-export const SENDWAVES_URL = process.env.SENDWAVE_URL;
 export const PROVIDER = process.env.PROVIDER || "sendwaves";

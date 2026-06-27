@@ -14,19 +14,19 @@ FROM node:22-alpine AS deploy
 
 WORKDIR /app
 
-ARG PORT
+ARG PORT=3006
 ENV PORT=$PORT
 EXPOSE $PORT
 
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package*.json ./
-COPY .env ./
 
-RUN apk add --no-cache git \
-    && npm install --production \
-    && npm cache clean --force \
-    && addgroup -g 1001 -S nodejs && adduser -S -u 1001 nodejs \
-    && chown -R nodejs:nodejs /app \
+RUN apk add --no-cache git \\
+    && npm install --production \\
+    && npm cache clean --force \\
+    && addgroup -g 1001 -S nodejs && adduser -S -u 1001 nodejs \\
+    && chown -R nodejs:nodejs /app \\
+    && touch /app/.env \\
     && rm -rf /root/.npm /root/.node-gyp /tmp/*
 
 USER nodejs

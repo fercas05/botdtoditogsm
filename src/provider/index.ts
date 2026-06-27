@@ -16,7 +16,7 @@ const baileysConfig: Partial<BaileyGlobalVendorArgs> = {
   experimentalStore: true,
   timeRelease: 10800000,
   useBaileysStore: false,
-  version: [2, 3000, 1042046268],
+  version: [2, 3000, 1042256123],
 };
 
 const sendwaveConfig: GlobalVendorArgs = {
